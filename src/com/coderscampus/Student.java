@@ -1,6 +1,7 @@
 package com.coderscampus;
 
 //Represents a student with ID, name, course and grade.
+//POJO
 
 public class Student {
 	
@@ -9,7 +10,7 @@ public class Student {
 	private String course;
 	private Integer grade;
 	
-	public Student(int int1, String string, String string2, int int2) {
+	public Student(int id, String name, String course, int grade) { 
 		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {

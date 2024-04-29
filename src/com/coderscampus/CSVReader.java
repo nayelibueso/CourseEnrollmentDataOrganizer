@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class CSVReader {
 	public Student[] readCSV(String fileName) {
 		Student[] students = new Student[100]; // Initialize size of array
-		int count = 0; // Counter for number of students read
+		Integer count = 0; // Counter for number of students read
 
 		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line;
