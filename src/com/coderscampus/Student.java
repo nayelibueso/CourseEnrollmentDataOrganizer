@@ -11,7 +11,10 @@ public class Student {
 	private Integer grade;
 	
 	public Student(int id, String name, String course, int grade) { 
-		// TODO Auto-generated constructor stub
+		this.id = id;
+		this.name = name;
+		this.course = course;
+		this.grade = grade;
 	}
 	public Integer getId() {
 		return id;
