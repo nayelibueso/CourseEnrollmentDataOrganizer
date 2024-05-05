@@ -13,9 +13,16 @@ public class CSVWriter {
 			fileWriter.write("Student ID, Student Name, Course, Grade\n");  //Write the header
 			
 			for (Student student : students) { //iterates over each 'Student' in 'student' array.
-				fileWriter.write(student.toString() + " \n"); //For each student, convert to a string and write it to the CSV file. Each student is written on a new line. 
-			}
-		}catch (IOException e) {
+				if(student != null) {
+					System.out.println("Writing Students: " + student.toString());
+					fileWriter.write(student.toString() + " \n"); //For each student, convert to a string and write it to the CSV file. Each student is written on a new line. 
+				} else {
+					System.out.println("Encountered null student.");
+				}
+			} 
+		}
+		
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 		

@@ -43,15 +43,16 @@ public class CourseManager {
 		
 		for (Student student : masterList) { //Iterates through each 'student' object in the 'masterlist' array.
 			if (student != null) {
-				if( "COMPSCI".contains(student.getCourse())) { //checks if the course of the current student is 'COMPSCI'
+				String courseCode = student.getCourse().split(" ")[0]; //Extract course number 
+				if( "COMPSCI".contains(courseCode)) { //checks if the course of the current student is 'COMPSCI'
 					course1Students[indexCourse1] = student;
-					++indexCourse1;
-				} else if("STAT".contains(student.getCourse())) {
+					indexCourse1++;
+				} else if("STAT".contains(courseCode)) {
 					course2Students[indexCourse2] = student;
-					++indexCourse2;
-				} else if ("APMTH".contains(student.getCourse())) {
+					indexCourse2++;
+				} else if ("APMTH".contains(courseCode)) {
 					course3Students[indexCourse3] = student;
-					++indexCourse3;
+					indexCourse3++;
 				}
 			}
 		}
