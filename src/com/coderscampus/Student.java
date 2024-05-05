@@ -10,6 +10,10 @@ public class Student {
 	private String course;
 	private Integer grade;
 	
+	@Override
+	public String toString() {
+		return id + "," + name + "," + course + "," + grade; 
+	}
 	public Student(int id, String name, String course, int grade) { 
 		this.id = id;
 		this.name = name;
