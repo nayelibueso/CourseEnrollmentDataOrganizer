@@ -1,8 +1,5 @@
 package com.coderscampus;
 
-//Represents a student with ID, name, course and grade.
-//POJO
-
 public class Student {
 	
 	private Integer id;

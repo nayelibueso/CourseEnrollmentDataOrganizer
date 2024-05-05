@@ -5,24 +5,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-//Modify to read the CSV file and dynamically manage arrays to store Student objects.
-
 public class CSVReader {
 	public Student[] readCSV(String fileName) {
-		Student[] students = new Student[100]; // Initialize size of array
-		Integer count = 0; // Counter for number of students read
+		Student[] students = new Student[100];
+		Integer count = 0;
 
-		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) { //try-with-recources block, automatically closes the 'BufferedReader' after the block has been executed. 
+		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line;
-			br.readLine(); // skip header
-			while ((line = br.readLine()) != null) { //Loop will continue until the end of the file.
+			br.readLine();
+			while ((line = br.readLine()) != null) {
 				String[] parts = line.split(",");
 
 				students[count] = new Student(Integer.parseInt(parts[0]), parts[1], parts[2],
-						Integer.parseInt(parts[3])); //Line creates new 'Student' using the data parsed from the CSV line and store it in the 'student' array at the current 'count' index.
+						Integer.parseInt(parts[3]));
 				count++;
 
-				if (count == students.length) { //checks if the number of students read has reached the capacity of the 'students' array. If so, it doubles the size of the array to ensure space for additional students.
+				if (count == students.length) {
 					students = Arrays.copyOf(students, students.length * 2);
 				}
 			}
@@ -30,7 +28,7 @@ public class CSVReader {
 			e.printStackTrace();
 		}
 
-		students = Arrays.copyOf(students, count); //line creates a new array containing only the actual number of students read and assigns it to the 'students' array. 
+		students = Arrays.copyOf(students, count);
 		return students;
 	}
 
