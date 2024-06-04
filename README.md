@@ -4,12 +4,12 @@ This project is designed to assist college professors in managing and organizing
 
 ## Key Features:
 
--Parse and read a master CSV file containing all student enrollments.
+- Parse and read a master CSV file containing all student enrollments.
 
--Separate and organize students into three distinct CSV files based on their courses.
+- Separate and organize students into three distinct CSV files based on their courses.
 
--Sort the students within each course file by their grades in descending order.
+- Sort the students within each course file by their grades in descending order.
 
--Handle null entries in the data to ensure smooth sorting and processing.
+- Handle null entries in the data to ensure smooth sorting and processing.
 
 This tool simplifies the task for professors, allowing them to quickly access and review the list of students enrolled in their courses.
